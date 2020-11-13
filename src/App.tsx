@@ -5,6 +5,14 @@ import theme from './theme'
 
 const App: React.FC = () => {
 
+  const Providers: React.FC = ({ children }) => {
+    return (
+      <ThemeProvider theme={theme}>
+
+      </ThemeProvider>
+    )
+  }
+
   return (
     <Providers>
       <Router>
@@ -13,12 +21,5 @@ const App: React.FC = () => {
   )
 }
 
-const Providers: React.FC = ({ children }) => {
-  return (
-    <ThemeProvider theme={theme}>
-
-    </ThemeProvider>
-  )
-}
 
 export default App
